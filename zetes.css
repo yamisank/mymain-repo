@@ -1,0 +1,16 @@
+body {
+    display: flex
+}
+
+#woop {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px 20px;
+    border: 2px solid tomato;
+    align-items: center;
+    justify-content: center;
+}
+#woop-sub{
+    gap: 10px;
+}

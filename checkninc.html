@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <input type="text" placeholder="type here" id="R">
+    <div id="conainer">
+
+    </div>
+    <button id="rel" onclick="Calc()">calculate</button>
+    <!-- <span>the Area is ${2 * Math.PI * R.value**2}</span> -->
+
+    <script>
+
+        const rel = document.getElementById('rel')
+        const R = document.getElementById('R')
+        const cont = document.getElementById('conainer')
+
+        // rel.addEventListener("click", Calc())
+
+        function Calc() {
+            if(R.value > -1 ){
+               return  cont.innerHTML = `
+               <div id="">
+                <span>the Area is ${2 * Math.PI * R.value**2}</span>
+              </div>
+            `         
+           }else {
+            cont.innerHTML = `Not a Valid positive`
+           }
+           cleart()
+        }
+
+        function cleart() {
+            R.innerHTML = ""
+        }
+
+    </script>
+</body>
+</html>

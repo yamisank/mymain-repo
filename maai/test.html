@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Styling links</title>
+    <style type="text/css">
+      /* Write your CSS solution here (do not edit the surrounding HTML) */
+      a {
+        color: rgb(85, 27, 138);
+        text-decoration: none;
+        visibility: hidden;
+      }
+      a:before {
+        content: '>Check documentation<';
+      }
+      a:hover {
+        cursor: help;
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="http://www.testdome.com">Check documentation</a>
+  </body>
+</html>

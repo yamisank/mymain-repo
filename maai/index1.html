@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="game.css">
+</head>
+<body>
+    
+
+    <h1 style="text-align: center;";>Guessing Game</h1>
+    <h2 style="text-align: center;">Guess between 0 to 10</h2>
+    <h4 style="text-align: center;" id="ok"></h4>
+    <input type="number" placeholder="Type" id="fn" style="margin-left: 640px;" min="0" max="1 ">
+    <button onclick="Check()" style="margin-left: 12px;">click to check</button>
+    <p id="all"></p>
+    <span id="demo"></span>
+    <script>
+        function move(){
+          document.getAnimations 
+        }
+        
+        
+
+        function Check(){
+            let rand = Math.random() * 10;
+
+            let digit = document.querySelector('#fn')
+
+            document.getElementById('demo').innerText = (Math.floor(rand))
+            if (digit.value == Math.floor(rand)) {
+                document.getElementById('all').innerText = ("Congratulations");
+                document.body.style.background = 'cyan'
+            }else{
+                document.getElementById('all').innerText = ("wrong");
+                document.body.style.background = 'red'
+            }
+            // document.getElementById('all').innerText = (fn == Math.floor(rand))
+        }
+    </script>
+</body>
+</html>

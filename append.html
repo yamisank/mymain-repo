@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./dist/output.css">
+</head>
+<body class="flex">
+    <div id="test" class="text-black";></div>
+    <main style="width: 500px; " class=" mx-auto";>
+        <section ;>
+            <div class=" flex gap-4 p-2 ">
+                <input id="name" type="text" class=" border border-black ";>
+                <input id="score" type="number" class=" border border-black ";>
+                <button class="py-2 px-4 rounded-md bg-sky-600 hover:bg-sky-700 hover:ring-2 hover:ring-fuchsia-500"; onclick="add()">
+                    Add
+                </button>
+            </div>
+        </section>
+
+        <section class="w-[460px]";>
+            <div class="flex text font-semibold justify-between border border-black bg-fuchsia-700 p-2">
+                <div class="";>Name</div>
+                <div>score</div>
+                <div>
+                    <button onclick="deldel" class="  "></button>
+                </div>
+            </div>
+
+            <div id="content" class=" text-white gap-3";>
+                
+            </div>
+            
+        </section>
+    </main>
+
+    <script>
+        const data = [];
+
+        const _name = document.getElementById('name')
+        const _score = document.getElementById('score')
+        const content = document.getElementById('content')
+        const test = document.getElementById('test')
+
+        
+        function add(){
+            data.push({name: _name.value, score: _score.value })
+            clearInput();
+            data.forEach((item, index) => {
+                content.innerHTML += `
+                <div class="flex text font-semibold justify-between border border-black bg-stone-400 p-3 ">
+                    <div> ${item.name} </div>
+                    <div class="ml-5" > ${item.score} </div>
+                    <div>
+                        <button class="border border-black rounded-sm bg-slate-500 py-1 px-2 active:bg-lime-200" onclick="eraser(${item})">deldel</button>
+                    </div>
+                </div>
+
+                `
+            })
+        }
+
+
+//         function eraser(item){
+//         if(data.indexOf(item) == -1) return
+//         data.splice(data.indexOf(item),1)
+//         test = data
+//    }
+
+        function clearInput(){
+            _name.value = ""
+            _score.value = ""
+            content.innerHTML = ""
+        }
+
+    </script>
+</body>
+</html> 

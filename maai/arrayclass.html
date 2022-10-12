@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            
+        }
+    </style>
+</head>
+<body>
+    <input type="text" id="input">
+    <div id="show"></div>
+    <button onclick="Remove()">remove</button>
+    <button onclick="Add()">Add</button>
+    <button onclick="push()">push</button>
+    <button onclick="pop()">pop</button>
+
+    <script>
+        let show = document.getElementById("show")
+        const accounts = ["Henshaw", "Samuel", true, "Jason", "what is thy name"]
+        console.log(accounts);
+
+        function Remove() {
+            accounts.shift()
+            console.log(accounts);
+            show.innerHTML = accounts
+        }
+
+        function Add(){
+            const input = document.getElementById("input")
+            accounts.unshift(input.value)
+            console.log(accounts)
+            show.innerHTML = accounts
+        }
+
+        function pop(){
+            const input = document.getElementById("input")
+            accounts.pop(input.value)
+            console.log(accounts)
+            show.innerHTML = accounts
+        }
+
+        function push(){
+            const input = document.getElementById("input")
+            accounts.push(input.value)
+            console.log(accounts)
+            show.innerHTML = accounts
+        }
+    </script>
+</body>
+</html>

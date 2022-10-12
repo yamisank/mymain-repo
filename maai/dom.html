@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            margin-left: 680px;
+        }
+        #h11 {
+            text-align: center;
+        }
+        #red {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            border: 3px solid black;
+        }
+        #yellow {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            border: 3px solid black;
+        }
+        #green {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            border: 3px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="red"></div>
+        <div id="yellow"></div>
+        <div id="green"></div>
+
+        
+            <button onclick="check()">change light</button>
+    </div>
+
+
+   <!-- <h1 id="h11"></h1>
+   <button onclick="check()">check</button> -->
+   <!-- <button onclick="Start()">change</button> -->
+    
+    <script>
+        let r = document.getElementById("red");
+        let y = document.getElementById("yellow");
+        let g = document.getElementById("green");
+
+        let light = "green"
+        let interval;
+
+        function traffic(){
+
+            if(light == "red" ){
+                r.style.backgroundColor = "white"
+                y.style.backgroundColor = "yellow"
+                g.style.backgroundColor = "white"
+
+                light = "yellow"
+            }else if(light == "yellow") {
+                r.style.backgroundColor = "white"
+                y.style.backgroundColor = "white"
+                g.style.backgroundColor = "green" 
+                light = "green"
+            }else if(light == "green") {
+                r.style.backgroundColor = "red"
+                y.style.backgroundColor = "white"
+                g.style.backgroundColor = "white" 
+                light = "red"
+            }
+        }
+        function check(){
+            interval = window.setInterval(traffic, 1000 * 7)
+        }
+        
+
+
+        // let color = document.getElementById('h11').innerText = "white"
+
+        // function check(){
+        //     h11.style.backgroundColor = "red";
+
+        //     if(color == "white"){
+        //         document.getElementById('h11').innerText = "black"
+        //         color = "black"
+        //     }else if(color == "black") {
+        //         document.getElementById('h11').innerText = "white"
+        //         color = "white"
+        //     }
+        // }
+
+    //    function Start(){
+    //     if(document.getElementById('h11').innerText == "black"){
+    //         document.getElementById('h11').innerText = "white"
+    //     }else if(document.getElementById('h11').innerText == "white") {
+    //         document.getElementById('h11').innerText = "black"
+    //     }
+    // }
+    </script>
+</body>
+</html>

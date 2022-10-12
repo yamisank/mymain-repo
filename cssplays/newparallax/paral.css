@@ -1,0 +1,40 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+.parallax{
+    height: 100vh;
+    background: url(https://wallpaperaccess.com/full/343619.jpg)fixed no-repeat center top/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.parallax--second{
+    background: url(https://i.pinimg.com/736x/26/da/78/26da780891a603e8f9793810350ac13a.jpg)fixed no-repeat center top/cover;
+}
+.parallax--third{
+    background: url(https://cdn.wallpapersafari.com/56/93/j3z8B2.jpg)fixed no-repeat center top/cover;
+}
+.parallaxtitle{
+    padding: 40px 50px;
+    color: white;
+    background-color: rgba(255,255,255, 0.5);
+    font-size: 80px;
+    border-radius: 10px;
+}
+.desc {
+    background-color: #000;
+    padding: 40px;
+}
+.desctext{
+    max-width: 900px;
+    margin: 0 auto;
+    color: #fff;
+    text-align: justify;
+    line-height: 30px;
+}
+.desctext:nth-child(2){
+    padding-top: 10px;
+}

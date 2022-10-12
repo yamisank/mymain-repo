@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="zetes.css">
+</head>
+<body>
+    <!-- NOTE THE ADD BUTTON IS ADDING THE WHOLE ARRAY AGAIN FIX BUG TOMORROW, NOW GO PLAY GAMES. -->
+
+    <div id="woop">
+        <div class=" flex p-2" id="woop-sub">
+            <input id="name" type="text" class=" border border-black ";>
+            <input id="score" type="number" class=" border border-black ";>
+        </div>
+        <div class="sample">
+    
+        </div>
+        
+        <button class="addMore">Add More</button>
+    
+    
+    </div>
+
+    <script>
+        const data = []; //empty the array that we will be pushing too
+        /*
+        1. down below we are using variables to reduce our typing workload
+        2. from const _name down to--> const getContainer
+        */    
+        const _name = document.getElementById('name')
+        const div = document.createElement('div');
+        const _score = document.getElementById('score')
+        // const content = document.getElementById('content')
+        const test = document.getElementById('test')
+        const getContainer = () => document.querySelector('.sample');
+        const container = getContainer();
+
+        //NOW WE USING ARROW FUNCTION TO MAKE OUR ADD BTN FUNCTION PROPERLY --> THIS IS THE addMore FUNCTION 👌
+        const addMore = () => {
+        // const container = getContainer();
+        data.push({name: _name.value, score: _score.value })
+            clearInput();
+        data.forEach((item, index) => {
+            const div = document.createElement('div');
+            const text = Date.now();
+            div.innerHTML = `
+            <div class="flex text font-semibold justify-between border border-black bg-stone-400 p-3" style="display: flex; gap: 10px; ">
+                    <div> ${item.name} </div>
+                    <div class="ml-5"> ${item.score} </div>
+            </div>`;
+            div.id = text;
+            container.appendChild(div);
+            const btn = document.createElement('button');
+            btn.innerText = 'Delete';
+            btn.classList.add('delete');
+            btn.dataset.for = text;
+            container.appendChild(btn);
+            // console.log(text)
+        })
+        }
+
+        // HERE WE MAKE USE addEventListener TO WATCH FOR CLICKS IN ORDER TO ACTIVATE THE addMore FUNCTION WE CREATED ABOVE 👂
+        document.addEventListener('click', ({target}) => {
+            if(target.matches('.addMore')) {
+            addMore();
+        }
+        
+        // HERE WE CHECK TO SEE IF THE CLASS WE ARE RAGETTING MATCHES (.delete), IF IT DOES, THIS FUNCTION REMOVES THE ELEMENT FROM DOM ❌
+        if(target.matches('.delete')) {
+            const delElement = document.querySelector(`div[id='${target.dataset.for}']`);
+            getContainer().removeChild(delElement);
+            getContainer().removeChild(target);
+        }
+
+        });
+
+        function clearInput(){
+            _name.value = ""
+            _score.value = ""
+            container.innerHTML = ""
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://unpkg.com/flowbite@1.5.3/dist/flowbite.min.css" />
+</head>
+<body>
+    
+<div class="flex">
+    <img controls id="image" style="width: 270px; "; alt="Img is loading">
+    <img id="image2" style="width: 270px; "; alt="">
+    <img id="image3" style="width: 270px; "; alt="">
+</div>
+<br><br>
+<input multiple type="file" onchange="preview(event)">
+
+
+
+<script>
+    
+
+    const imm = document.getElementById('image')
+    const imm2 = document.getElementById('image2')
+    const imm3 = document.getElementById('image3')
+
+    function preview(event){
+        const freader = new FileReader();
+        const freader2 = new FileReader();
+        const freader3 = new FileReader();
+        const file = event.target.files[0];
+        const file2 = event.target.files[1];
+        const file3 = event.target.files[2];
+
+        freader.readAsDataURL(file);
+        freader2.readAsDataURL(file2);
+        freader3.readAsDataURL(file3);
+
+        freader.onload = () => {
+            if(imm.src == freader.result){
+                imm2.src = freader2.result
+                imm3.src = freader3.result
+
+            }
+            // console.log(file.size / 1024 / 1024)
+            // if (file.size > 2000000 ){
+            //     alert('too big')
+            //     imm.src = '!!!!'
+            // }else {
+                
+            // }
+        };
+
+        freader.onerror = (err) => {
+            console.log(err)
+        };
+    }
+
+
+
+</script>
+</body>
+</html>

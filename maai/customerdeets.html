@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *, *::after, *::before {
+    /* box-sizing: border-box; */
+    font-family: Gotham Rounded, sans-serif;
+    }
+        body{
+            background: url(https://img.freepik.com/free-photo/cool-geometric-triangular-figure-neon-laser-light-great-background_181624-11412.jpg?w=2000);
+            display: flex;
+            justify-content: center;
+        }
+        #cont {
+            color: white;
+            background-color: black;
+            overflow-y: auto;
+            top: 100px;
+            margin-right: 40px;
+            padding: 20px;
+            border: 3px solid rgba(171,171,171, 0.5);
+            border-radius: 10px;
+            height: 90vh;
+            gap: 10px;
+        }
+        #head {
+            display: flex;
+            column-gap: 14px;
+            font-size: 25px;
+        }
+        #title {
+            font-size: 25px;
+        }
+        #inpcont {
+            background-color: white;
+            height: 200px;
+            text-align: center;
+            width: 300px;
+            border: 1px solid black;
+            border-radius: 10px;
+            padding: 15px;
+            justify-content: space-around;
+        }
+        .tt{
+            width: 100%;
+            font-size: 20px;
+            border-radius: 6px;
+            background-color: white;
+            outline: none;
+            border: 1px solid black;
+            margin-bottom: 10px;
+        }
+        #body {
+            display: flex;
+            column-gap: 10px;
+        }
+        #btnhouse {
+            margin-top: 8px;
+        }
+        #show {
+           font-size: 25px;
+           color: white;
+        }
+        #btn {
+            border-radius: 5px;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: white;
+            border: 1px solid black;
+            transition: 0.2s;
+        }
+        #btn:active{
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div id="cont">
+        <div id="head">
+            <div>
+                <div id="title">Product Name</div>
+                <div id="show"></div>
+            </div>
+            <div>
+                <div id="title">Price</div>
+                <div id="show1"></div>
+            </div>
+            <div>
+                <div id="title">product id</div>
+                <div id="show2"></div>
+            </div>
+            <div>
+                <div id="title">description</div>
+                <div id="show3"></div>
+            </div>
+        </div>
+    </div>
+    <div id="inpcont">
+        <input class="tt" id="txtinp" type="text" placeholder="Product Name">
+        <input class="tt" id="txtinp2" type="text" placeholder="Price">
+        <input class="tt" id="txtinp3" type="text" placeholder="Product Id">
+        <input class="tt" id="txtinp4" type="text" placeholder="Product Description">
+        <div id="btnhouse">
+            <button id="btn" onclick="Add()">Add now</button>
+            <button id="btn" onclick="Remove()">Delete</button>
+        </div>
+    </div>
+
+    
+<script>
+    //changing html ids to variables
+    let show = document.getElementById('show')
+    let show1 = document.getElementById('show1')
+    let show2 = document.getElementById('show2')
+    let show3 = document.getElementById('show3')
+
+        const data = [{
+            Productname:"", price:"", productid:"", description:""
+        }];
+        //function for adding to display area
+        function Add(){
+            show.innerHTML = ""
+            show1.innerHTML = ""
+            show2.innerHTML = ""
+            show3.innerHTML = ""
+            data.push({Productname:document.getElementById('txtinp').value, price:document.getElementById('txtinp2').value, productid:document.getElementById('txtinp3').value, description:document.getElementById('txtinp4').value})
+            
+            //now to tell the info where to go
+            data.forEach(value => {
+                show.innerHTML += `
+                <div>
+                <p> ${Value.Productname} </p>
+                </div>
+                `
+                show1.innerHTML += `
+                <div>
+                <p> ${Value.price} </p>
+                </div>
+                `
+                show2.innerHTML += `
+                <div>
+                <p> ${Value.productid} </p>
+                </div>
+                `
+                show3.innerHTML += `
+                <div>
+                <p> ${Value.description} </p>
+                </div>
+                `
+            })
+        }
+        function Remove(){
+            data.pop(document.getElementById('txtinp').value)
+            showArray()
+        }
+
+        // function showArray(){
+        //     document.getElementById("show").innerHTML = ""
+        //     data.forEach(function(item, index){
+        //         document.getElementById("show").innerHTML += `
+        //         <div style="">
+        //             <div style="display: flex;">
+        //                 <div>
+        //                     <span> ${item} </span>
+        //                 </div>
+
+        //                 </div>    
+        //             </div>
+        //             `;
+        //         })
+
+           
+        //     }   
+</script>
+</body>
+</html>

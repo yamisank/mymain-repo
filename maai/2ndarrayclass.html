@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../icofont/icofont.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Quicksand&family=Silkscreen&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+        body {
+            background: url(https://img.wallpapersafari.com/desktop/1920/1080/8/58/x2UQJa.jpg);
+            display: flex;
+        }
+        #showcont{
+            /* From https://css.glass */
+            transform: translateY(50px);
+            background: rgba(0, 0, 0, 0.19);
+            border-radius: 16px;
+            box-shadow: 0 4px 50px rgba(255,255,255, 0.8);
+            backdrop-filter: blur(7.4px);
+            -webkit-backdrop-filter: blur(7.4px);
+            border: 1px solid rgba(0, 0, 0, 0.07);
+            margin-left: 60px;
+            width: 500px;
+            height: 600px; 
+            border: 3px solid black;
+            contain: content;
+            overflow-y: auto;
+            scroll-behavior: smooth;
+        }
+        #show {
+            font-weight: 500;
+            position: relative;
+            font-size: 20px;
+            border: 1px solid rgba(171,171,171 0.6);
+            background-color: rgba(255,2555,255, 0.6);
+            font-family: 'Quicksand', sans-serif;
+            width: 90%;
+            border-radius: 10px;
+            margin-left: auto;
+            margin-right: auto;
+            color: rgb(1, 111, 144);
+            font-weight: 500;
+            box-shadow: 0 4px 26px rgb(73, 211, 250);
+            justify-content: center;
+        }
+        #newpic {
+            width: 30px;
+            height: 30px;
+        }
+        #direct {
+            font-size: 25px;
+            text-align: center;
+            color: white;
+            font-family: 'Silkscreen', cursive;
+            text-shadow: 0 4px 50px rgba(255,255,255, 1);
+        }
+        #rem {
+            text-align: center;
+            border: 1px solid rgba(0, 0, 0, 1);
+            background-color: white;
+            padding: 0;
+            border-radius: 5px;
+            padding-left: 2px;
+            padding-right: 2px;
+            color: black;
+            padding-top: 5px;
+        }
+        #wella #rem:hover {
+            opacity: 0.4;
+            cursor: pointer;
+        }
+        .icofont-close-circled {
+            font-size: larger;
+        }
+        .wetin {
+            width: 590px;
+            height: 40px;
+            margin: auto;
+            margin-top: 200px;
+            margin-left: 120px;
+            margin-right: 60px;
+        }
+        #text {
+            width: 80%;
+            height: 80%;
+            font-size: 1rem;
+        }
+        #ad {
+            font-size: 15px;
+            color: white;
+            font-weight: 500;
+            background-color: grey;
+            border-radius: 5px;
+            text-align: center;
+            padding: 10px;
+            background: rgba(95, 0, 135, 0.9);
+            backdrop-filter: blur(7.4px);
+            -webkit-backdrop-filter: blur(7.4px);
+        }
+        .reg {
+            color: white;
+            font-family: 'Silkscreen', cursive;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="wetin">
+    <h1 class="reg">INPUT YOUR NAME FOR REGISTRATION</h1>
+    <input id="text" type="text" class="input">
+    <button onclick="Add()" id="ad" class="button">+</button>
+    </div>
+    <!-- <button onclick="Remove()" id="rem"><i class="icofont-close-circled"></i></button> -->
+    <div id="showcont">
+        <div id="wella">
+        <div>
+            <div><h5 id="direct">Name Directory</h5></div>
+        <div>
+            <button onclick="Remove('Jason')" id="rem">Del</button>
+        </div>
+        </div>
+        <div id="show"></div> 
+        </div>
+    </div>
+    <script>
+        
+
+        const data = [];
+        console.log(data)
+        function Add(){
+            data.push(document.getElementById('text').value)
+            showArray()
+        }
+        function Remove(item){
+            if(data.indexOf(item) == -1) return
+            document.getElementById("show").innerHTML = data.splice(data.indexOf(item), 1)
+            showArray()
+            // data.pop(document.getElementById('text').value)
+            // showArray()
+        }
+
+        function showArray(){
+            document.getElementById("show").innerHTML = ""
+            data.forEach(function(item, index){
+                document.getElementById("show").innerHTML += `
+                <div style="margin: 15px">
+                    <div style="display: flex;">
+                        <div>
+                            <strong> ${index}</strong>&nbsp;
+                            <span> ${item} </span>
+                        </div>
+
+                        </div>    
+                    </div>
+                    `;
+                })
+            }
+            
+            let input = document.querySelector(".input");
+            let button = document.querySelector(".button");
+
+            button.disabled = true; //setting button state to disabled
+
+            input.addEventListener("change", stateHandle);
+
+            function stateHandle() {
+            if (document.querySelector(".input").value === "") {
+                button.disabled = true;  //button remains disabled
+            } else {
+                button.disabled = false;  //button is enabled
+            }
+        }
+            </script>
+</body>
+</html>
+<!-- <img src="./cssplays/pics/41295.jpg" alt="" id="newpic"> -->

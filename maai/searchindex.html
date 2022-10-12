@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>Searsh and Find</h1>
+    <input type="text" id="checking">
+    <button onclick="checke()">search</button>
+    <p id="oii" style="font-size: 30px;"></p>
+    <h1 class="rat" style="color: black;"></h1>
+
+    <script>
+        let sentence = "Ore" //assigning ore to sentence as a variable
+
+        function checke(){
+        let end = sentence.length - 1;
+        let result = sentence.substr(0, end);
+        document.getElementById("oii").innerText = result
+        sentence = result;
+        if (result <= 0){
+        document.getElementById("oii").innerText = "out of words!!!"
+        
+        }
+        }
+        
+        
+    </script>
+
+</body>
+</html>
+<!-- let sentence = "Ola is not here"
+        const checking = document.getElementById("checking")
+        let result = sentence.search(checking.value)
+        
+        if(result >= 0)
+        document.getElementById("oii").innerText  = "Search found"
+        else{
+        document.getElementById("oii").innerText = "Getout"
+        } -->

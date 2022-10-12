@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&family=Silkscreen&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppinns', sans-serif;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #fff;
+}
+
+.box{
+    position: relative;
+    width: 300px;
+    height: 600px;
+    background-color: #666;
+    border-radius: 50px;
+    object-fit: cover;
+}
+
+.box::before {
+    content: '';
+    position: absolute;
+    inset: 3px;
+    background: black;
+    border-radius: 48px;
+}
+
+.inner {
+    position: absolute;
+    inset: 3px;
+    background: url(../pics/oshi.jpg);
+    background-size: cover;
+    background-position: center;
+    border: 9px solid black;
+    border-radius: 48px;
+    display: flex;
+    justify-content: center;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.box:hover .inner {
+    opacity: 1;
+}
+
+.btn {
+    position: absolute;
+    top: 110px;
+    left: -3px;
+    width: 4px;
+    height: 24px;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    background: radial-gradient(#ccc, #666, #222);
+    z-index: 10; 
+}
+
+.btn.btn2 {
+    top: 160px;
+    height: 40px;
+}
+
+.btn.btn3 {
+    top: 220px;
+    height: 40px;
+}
+
+.powerOn {
+    position: absolute;
+    top: 110px;
+    right: -3px;
+    width: 4px;
+    height: 60px;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    background: radial-gradient(#ccc, #666, #222);
+    z-index: 10; 
+}
+
+.island-pop {
+    position: absolute;
+    top: 10px;
+    width: 90px;
+    height: 25px;
+    background: black;
+    border-radius: 20px;
+    transition: 0.4s linear;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.island-pop:hover {
+    width: 200px;
+    height: 25px;
+    cursor: default;
+}
+
+.island-pop.active {
+    width: 250px;
+    height: 60px;
+    border-radius: 50px;
+}
+
+.content {
+    position: relative;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 10px;
+    line-height: 25px;
+}
+
+.content p{
+    color: white;
+    font-size: 0.6rem;
+    cursor: default;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
+    transform: translateY(-12px);
+}
+
+.action {
+    position: relative;
+    top: 1px;
+    color: white;
+    display: flex;
+    gap: 12px;
+    transition: 0.5s;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.island-pop.active .action{
+    top: 12px;
+}
+
+ion-icon.red {
+    color: red;
+    rotate: 135deg;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+ion-icon.green {
+    color: limegreen;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.island-pop:hover p,
+.island-pop.active p,
+.island-pop:hover .action,
+.island-pop.active .action {
+    visibility: visible;
+    opacity: 1;
+    transition-delay: 0.23s;
+}
+
+.island-pop:hover p {
+    font-size: 14px;
+    color: fuchsia;
+    font-style: oblique;
+}
+
+.island-pop.active p {
+    translate: 50px;
+    transform: translateY(7px);
+    font-size: 14px;
+    color: fuchsia;
+    font-style: oblique;
+}
+
+.island-pop.active ion-icon.red{
+    background: red;
+    color: white;
+    border-radius: 50%;
+    box-shadow: 0 0 0 8px red;
+    margin-right: 12px;
+}
+
+.island-pop.active ion-icon.green {
+    background: limegreen;
+    color: white;
+    border-radius: 50%;
+    box-shadow: 0 0 0 8px limegreen;
+    margin-right: 8px;
+}
+
+.details {
+    position: relative;
+    display: flex;
+    align-items: center;
+    /* isolation: isolate; */
+}
+
+.details .imgbx{
+    position: relative;
+    width: 0;
+    height: 0;
+    background: white;
+    border-radius: 50%;
+    /* overflow: hidden; */
+    transition: 0.5s;
+}
+
+.island-pop.active .details .imgbx {
+    width: 40px;
+    height: 40px;
+    margin-right: 8px;
+    border-radius: 50%;
+} 
+
+.details .imgbx img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+

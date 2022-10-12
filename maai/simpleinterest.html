@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="">Principal:</label>
+    <input id="p" type="number"><br>
+    <!-- rate -->
+    <label for="">Rate:</label>
+    <input id="r" type="number"><br>
+    <!-- years -->
+    <label for="">years:</label>
+    <input id="n" type="number"><br>
+    <button onclick="Calculate()">Calculate</button>
+    <p id="result"></p>
+    <script>
+        function Calculate ()
+        {
+            p = document.getElementById("p").value;
+            n = document.getElementById("n").value;
+            r = document.getElementById("r").value;
+            result = document.getElementById("result");
+            result.innerHTML = "The interest is    " + (p*n*r/100);
+
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="text"></p>
+    <button onclick="inc()">inc</button>
+    <button onclick="dec()">dec</button>
+    <script>
+
+        let count = 5;
+        function inc(){
+            if(count != 10){
+                count++;
+                showCurrentCount();
+        }
+    }
+
+        function dec(){
+            if(count != 0){
+                count--;
+                showCurrentCount();
+            }
+        }
+
+        function showCurrentCount(){
+            document.getElementById("text").innerHTML = count;
+        }
+
+
+
+
+        // let y = "GREEN"
+        
+        // if (y == "RED") {
+        //     console.log("stop dia")
+        // }else if(y == "GREEN"){
+        //     console.log("Get set")
+        // }else {
+        //     console.log("something went wrong")
+        // }
+
+    </script>
+</body>
+</html>

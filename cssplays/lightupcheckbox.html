@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../icofont/icofont.min.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: rgb(0,5,5);
+            height: 100vh;
+        }
+        ul {
+            position: relative;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+        ul li {
+            position: relative;
+            list-style: none;
+            width: 100px;
+            text-align: center;
+        }
+        ul li label {
+            position: relative;
+        }
+        ul li label i,
+        ul li label input[type="checkbox"] {
+            display: block;
+            text-align: center;
+        }
+        ul li label i {
+            font-size: 30px;
+            color: #222;
+            transition: 0.5s;
+        }
+        ul li label input[type = "checkbox"] {
+            position: absolute;
+            /* opacity: 0; */
+            cursor: pointer;
+        }
+        ul li label .check {
+            position: relative;
+            display: block;
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(#000, #333);
+            border-radius: 50%;
+            margin: 10px auto 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        ul li label .check::before {
+            content: "";
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background-color: white;
+        }
+    </style>
+</head>
+<body>
+      <ul>
+        <li>
+            <label for="">
+                <input type="checkbox" name="">
+                <i  id="ik" class="icofont-audio"></i>
+                <span class="check"></span>
+            </label>
+        </li>
+        <li>
+            <label for="">
+                <input type="checkbox" >
+                <i id="ik" class="icofont-wifi"></i>
+                <span class="check"></span>
+            </label>
+        </li>
+        <li>
+            <label for="">
+                <input type="checkbox" >
+                <i id="ik" class="icofont-location-pin"></i>
+                <span class="check"></span>
+            </label>
+        </li>
+        
+      </ul>
+</body>
+</html>

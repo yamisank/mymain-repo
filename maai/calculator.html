@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../icofont/icofont.min.css">
+    <style>
+       .mainbod {
+        margin-left: 560px;
+        border: 1px solid black;
+        width: 21%;
+        height: auto;
+        background-color: rgb(31, 31, 31);
+        border-radius: 10px;
+        padding: 5px;
+        
+       }
+       .screen {
+        margin-bottom: 10px;
+        height: 34px;
+        color: white;
+        font-size: 27px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+       }
+       /* .screen2 {
+        border: 1px solid white;
+        height: 34px;
+        color: white;
+        font-size: 27px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+       } */
+       .keys {
+        display: block;
+        flex-wrap: wrap;
+        padding: 2px;
+       }
+       #allkey {
+        width: 70px;
+        height: 65px;
+        background-color: black;
+        color: white;
+        transition: all 0.1s linear;
+       }
+       #allkey:hover {
+        background-color: rgb(255,255,255, 0.2);
+        cursor: pointer;
+       }
+       .header {
+        color: white;
+        font-family: sans-serif;
+        font-size: 14px;
+        margin-bottom: 10px;
+       }
+       i {
+            font-size: 15px;
+       }
+       i:hover {
+        cursor: pointer;
+       }
+       .defin {
+        display: flex;
+       }
+       #bit {
+        font-size: 20px;
+        color: white;
+        background: rgba(0, 0, 0, 0.11);
+        backdrop-filter: blur(7.4px);
+        -webkit-backdrop-filter: blur(7.4px);
+        width: 100%;
+        height: 80px;
+       }
+       #offon {
+        width: px;
+        height: 98%;
+        background-color: burlywood;
+        color: white;
+        transition: all 0.1s linear;
+       }
+       #offon:hover {
+        background-color: rgb(255,255,255, 0.2);
+        cursor: pointer;
+        color: black;
+       }
+    </style>
+</head>
+<body>
+    <div style="margin-left: 565px;"><button id="off2" onclick="offon()">AC</button></div>
+    <!-- <input type="text" name="" class="screen" readonly> -->
+    <div class="mainbod">
+    <div class="header">
+        <span>Calculator</span>
+
+        <i class="icofont-minus" style="margin-left: 175px;"></i>
+        <i class="icofont-terminal"></i>
+        <i class="icofont-close-line"></i>
+    </div>
+    <div class="screen"></div>
+    <div class="screen2"></div>
+        <div class="defin">
+            <div class="keys">
+                <div style="display: flex; gap: 3px;";>
+                <button id="allkey" onclick="num(7)">7</button>
+                <button id="allkey" onclick="num(8)">8</button>
+                <button id="allkey" onclick="num(9)">9</button>
+                </div>
+                <div style="display: flex; gap: 3px;";>
+                <button id="allkey" onclick="num(4)">4</button>
+                <button id="allkey" onclick="num(5)">5</button>
+                <button id="allkey" onclick="num(6)">6</button>
+                </div>
+                <div style="display: flex; gap: 3px;";>
+                <button id="allkey" onclick="num('1')">1</button>
+                <button id="allkey" onclick="num('2')">2</button>
+                <button id="allkey" onclick="num(3)">3</button>
+                </div>
+                <div style="display: flex; gap: 3px;";>
+                <button id="allkey" onclick="num(0)">0</button>
+                <button id="allkey" onclick="num('.')">.</button>
+                <button id="allkey" onclick="opera('del')">clr</button>
+                </div>
+                <div>
+                    <button id="bit" onclick="equalTo()">=</button>
+                </div>
+                </div>
+                <div class="signs">
+                <button id="allkey" onclick="opera('+')">+</button>
+                <button id="allkey" onclick="opera('-')">-</button>
+                <button id="allkey" onclick="opera('x')">x</button>
+                <button id="allkey" onclick="opera('/')">/</button>
+                <button id="allkey" onclick="opera('%')">%</button>
+                <button style="background-color: black; color: white; width: 99%;"; >CE</button>
+                </div>
+                <div><button id="offon" onclick="offon()">AC</button></div>
+        </div>
+    </div>
+
+
+    <script>
+        
+    let screen = document.querySelector('.screen');
+    let screen2 = document.querySelector('.screen2')
+    let fnum;
+    let snum;
+    let operator;
+
+    function num(a) {
+        screen.innerHTML += a
+    }
+
+    function opera(b){
+        operator = b 
+        if (screen.innerHTML == ''){
+            return
+
+        }else {
+            fnum =screen.innerHTML
+            screen.innerHTML = ""
+        }
+    }
+
+    function equalTo(){
+        snum = screen.innerHTML;
+        if (operator == '+') {
+            let result = Number(fnum) + Number(snum)
+            screen.innerHTML = result
+        }
+        else if(operator == '-'){
+            let result = Number(fnum) - Number(snum)
+            screen.innerHTML = result
+        }
+        else if(operator == 'x'){
+            let result = Number(fnum) * Number(snum)
+            screen.innerHTML = result
+        }
+        else if(operator == '/'){
+            let result = Number(fnum) / Number(snum)
+            screen.innerHTML = result
+        }
+        else if(operator == '%'){
+            let result = Number(fnum) * Number(snum)/100
+            screen.innerHTML = result
+        }
+    }
+    
+    let mainbod = document.querySelector(".mainbod")
+    let off = document.querySelector('#off2')
+
+    function offon() {
+        mainbod.button.disabled = true
+        
+
+
+
+
+
+
+        // let on = document.querySelector('#offon')
+        // var on = document.querySelector(".mainbod");
+        // if (on.style.display === "none") {
+        // on.style.display = "block";
+        // } else {
+        // on.style.display = "none";
+        // }
+    }
+    </script>
+</body>
+</html>

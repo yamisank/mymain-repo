@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background: linear-gradient(black, grey, red);
+            overflow-x: hidden;
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: rgb(50,50,50);
+        }
+        ul {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: row-reverse ;
+        }
+        ul li {
+            list-style: none;
+            color: #fff;
+            font-size: 6em;
+            font-weight: bold;
+            letter-spacing: 10px;
+            filter: blur(1px);
+            transition: 4s;
+        }
+        ul li:hover,
+        ul li:hover ~ li {
+            transform: rotate(180deg) translateY(-200px);
+            transition: 2s;
+            filter: blur(20px);
+            opacity: 0;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>T</li>
+        <li>X</li>
+        <li>E</li>
+        <li>T</li>
+        <li>_</li>
+        <li>T</li>
+        <li>S</li>
+        <li>O</li>
+        <li>H</li>
+        <li>G</li>
+    </ul>
+</body>
+</html>

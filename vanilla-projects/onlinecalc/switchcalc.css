@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Silkscreen&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: cursive;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #091921;
+}
+.calculator {
+    position: relative;
+    display: grid;
+    margin: auto;
+}
+.calculator .value {
+    grid-column: span 4;
+    height: 70px;
+    text-align: right;
+    border: none;
+    outline: none;
+    padding: 10px;
+    font-size: 20px;
+    opacity: 0.7;
+}
+.calculator span{
+    display: grid;
+    width: 90px;
+    height: 60px;
+    color: #fff;
+    background: #0c2835;
+    place-items: center;
+    border: 1px solid rgba(0,0,0,.1);
+}
+.calculator span:active{
+    background-color: #74ff3b;
+    color: #111;
+}
+.calculator span.clear{
+    grid-column: span 1;
+    /* width: px; */
+    background: #ff3077;
+}
+.calculator span.plus {
+    grid-row: span 1;
+}
+.calculator span.equal {
+    background: #03b1ff;
+}
