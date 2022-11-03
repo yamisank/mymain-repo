@@ -1,0 +1,308 @@
+/* Adding google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Dirt&display=swap');
+*{
+    font-family: 'Poppins', sans-serif;
+    padding: 0;
+    margin: 0;
+    scroll-padding-top: 2rem;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+body {
+    background-image: url(https://static.wikia.nocookie.net/starwars/images/2/2c/Starfield.jpg/revision/latest?cb=20210820011702);
+    overflow-x: hidden;
+}
+
+
+:root {
+    --main-color: #fd4646;
+    --text-color: #171427;
+    --bg-color: #fff;
+}
+
+.fakenav {
+    margin-bottom: 20px;
+    justify-content: space-between;
+    background-color: rgb(255,255,255,0);
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    backdrop-filter: blur(10.6px);
+    -webkit-backdrop-filter: blur(10.6px);
+}
+
+#cart-icon {
+    margin-top: 18px;
+    margin-right: 5px;
+    color: white;
+}
+
+.wassup {
+    position: relative;
+}
+
+.cart-badge {
+    border-radius: 10px;
+    top: 13px;
+    right: 5px;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: #ab002e;
+    color: white;
+} 
+
+.add-cart {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: chocolate;
+    color: var(--bg-color);
+    padding: 10px;
+    cursor: pointer;
+    transition: all 0.4s linear;
+}
+.add-cart:hover {
+    background-color: rgb(48,48,48, 0.6) ;
+}
+
+.cart {
+    background-image: linear-gradient(to right bottom, #390221, #420532, #470d45, #47195b, #3e2672, #4d2678, #5d257e, #6d2382, #90006a, #a4004d, #ab002e, #a62b07);
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 360px;
+    height: 100vh;
+    max-height: 100vh;
+    padding: 20px;
+    /* background: var(--bg-color); */
+    box-shadow: -2px 0 4px rgb(165,160,170, 0.8);
+    z-index: 100;
+    transition:  0.3s; 
+    overflow-y: auto;
+}
+
+#cart::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	background-color: black;
+}
+
+#cart::-webkit-scrollbar
+{
+	width: 10px;
+	background-color: #F5F5F5;
+}
+
+#cart::-webkit-scrollbar-thumb
+{
+	background-color: rgb(130, 0, 0);
+	border: 2px solid #555555;
+    border-radius: 5px;
+}
+
+.cart-title {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-top: 2rem;
+}
+
+.cart.active {
+    right: 0;
+}
+
+.cart-box {
+    border-radius: 20px;
+    /* background-color: white; */
+    background-color: #fff;
+    display: grid;
+    grid-template-columns: 32% 40% 18%;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1px solid black;
+}
+
+.cart-img {
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+    padding: 10px;
+}
+
+.detail-box {
+    display: grid;
+    row-gap: 0.5rem;
+}
+
+.cart-product-title {
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+
+.cart-price {
+    font-weight: 500;
+}
+
+.cart-quantity {
+    border: 1px solid var(--text-color);
+    outline-color: var(--main-color);
+    width: 5rem;
+    text-align: center;
+    font-size: 1rem;
+}
+
+.cart-remove {
+    font-size: 24px;
+    color: var(--main-color);
+    cursor: pointer;
+}
+
+.total {
+    position: absolute;
+    top: 0;
+    left: 10px;
+    display: felx;
+    justify-content: flex-end;
+    margin-top: 1.5rem;
+    border-top: 1px solid var(--text-color);
+}
+
+.total-title {
+    font-size: var(--genfontsize);
+    font-weight: 600;
+}
+.total-price {
+    margin-right: 1rem;
+    font-weight: 1000;
+    text-shadow: 0px 10px 60px  rgb(255, 255, 255, 1);;
+}
+
+.btn-buy {
+    display: flex;
+    margin: 1.5rem auto 0 auto;
+    padding: 12px 20px;
+    border: 1px solid rgb(165,160,170, 0.3);
+    background: var(--main-color);
+    color: cadetblue;
+    border-radius: 3px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    width: fit-content;
+    transition: all 0.4s linear;
+}
+
+.btn-buy:hover {
+    background: var(--text-color);
+}
+
+#close-cart {
+    position: absolute;
+    top: 1rem;
+    right: 0.8rem;
+    font-size: 2rem;
+    color: var(--text-color);
+    cursor: pointer;
+    transition: all 0.2s  linear;
+    rotate: 45deg;
+}
+
+#close-cart:hover {
+    rotate: 0deg;
+    color: whitesmoke;
+}
+
+.heading {
+    color: white;
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    font-family: 'Rubik Dirt', cursive;
+}
+
+.bxs-analyse {
+    font-size: 48px;
+}
+
+#cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    color: white;
+}
+
+.card {
+    /* From https://css.glass */
+    background: rgba(68, 0, 146, 0.25);
+    border-radius: 16px;
+    backdrop-filter: blur(7.6px);
+    -webkit-backdrop-filter: blur(7.6px);
+    box-shadow: 0px 10px 60px  rgb(255, 255, 255, 0.3);
+    border: 1px solid rgba(68, 0, 146, 0.97);
+    word-wrap:normal;
+    width: 22%;
+    height: 30rem;
+    /* padding: 6px ; */
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    transition: all 0.5s;
+    flex-shrink: 0;
+}
+
+.card:hover {
+    scale: 0.95;
+    /* transform: translateY(-20px); */
+    box-shadow: 0px 10px 70px  rgb(105, 204, 250);
+}
+
+.images {
+    width: 60%;
+    /* height: 7rem; */
+    margin: auto;
+}
+
+.title {
+    font-size: 1.3rem;
+}
+
+.category, .price {
+    font-weight: bold;
+    text-transform: capitalize;
+    margin: 1rem;
+    font-size: 1.2rem;
+} 
+
+/* Making work Responsive */
+/* @media (max-width:1080px){
+    .nav{
+        padding: 15px;
+    }
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

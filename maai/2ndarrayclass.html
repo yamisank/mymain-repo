@@ -134,12 +134,13 @@
             data.push(document.getElementById('text').value)
             showArray()
         }
+
         function Remove(item){
-            if(data.indexOf(item) == -1) return
-            document.getElementById("show").innerHTML = data.splice(data.indexOf(item), 1)
-            showArray()
-            // data.pop(document.getElementById('text').value)
+            // if(data.indexOf(item) == -1) return
+            // document.getElementById("show").innerHTML = data.splice(data.indexOf(item), 1)
             // showArray()
+            data.pop(document.getElementById('text').value)
+            showArray()
         }
 
         function showArray(){

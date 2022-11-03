@@ -1,1 +1,55 @@
 npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch
+
+
+
+
+perfect color ⬇️⬇️
+
+background-image: linear-gradient(to right bottom, #640080, #790034, #5c0e00, #372300, #192302);
+
+
+
+
+
+
+
+<input id="input" type="text">
+  <button onclick="Add()">Add</button>
+  <button onclick="localAdd()">local add</button>
+  <button onclick="localGet()">local get</button>
+ <h1 id="content"></h1>
+
+
+// function localAdd(){
+      //   let array = ["Samiuel", "Ife", "Jason"]
+      //   localStorage.setItem('name', JSON.stringify(array))
+      // }
+
+      // function localGet(){
+      //   let arr = localStorage.getItem('name')
+      //   let convertedJSONString = JSON.parse(arr)
+      //   console.log(arr)
+      //   console.log(convertedJSONString)
+      // }
+
+      // let usernames = []
+
+      // let localData = JSON.parse(localStorage.getItem('users'))
+      // if(localData != null){
+      //   usernames = localData;
+      // }
+
+      // const input = document.getElementById('input')
+      // const content = document.getElementById('content')
+
+      // content.innerText = usernames.toString()
+      
+
+      // function Add(){
+      //     usernames.push(input.value);
+      //     content.innerText = usernames.toString()
+      //     localStorage.setItem("users", JSON.stringify(usernames))
+      // }
+
+
+

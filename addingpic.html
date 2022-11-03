@@ -23,27 +23,29 @@
     
 
     const imm = document.getElementById('image')
-    const imm2 = document.getElementById('image2')
-    const imm3 = document.getElementById('image3')
+    // const imm2 = document.getElementById('image2')
+    // const imm3 = document.getElementById('image3')
 
     function preview(event){
         const freader = new FileReader();
-        const freader2 = new FileReader();
-        const freader3 = new FileReader();
+        // const freader2 = new FileReader();
+        // const freader3 = new FileReader();
         const file = event.target.files[0];
-        const file2 = event.target.files[1];
-        const file3 = event.target.files[2];
+        // const file2 = event.target.files[1];
+        // const file3 = event.target.files[2];
 
         freader.readAsDataURL(file);
-        freader2.readAsDataURL(file2);
-        freader3.readAsDataURL(file3);
+        // freader2.readAsDataURL(file2);
+        // freader3.readAsDataURL(file3);
 
         freader.onload = () => {
-            if(imm.src == freader.result){
-                imm2.src = freader2.result
-                imm3.src = freader3.result
+            imm.src = freader.result
 
-            }
+            // if(){
+            //     imm2.src = freader2.result
+            //     imm3.src = freader3.result
+
+            // }
             // console.log(file.size / 1024 / 1024)
             // if (file.size > 2000000 ){
             //     alert('too big')

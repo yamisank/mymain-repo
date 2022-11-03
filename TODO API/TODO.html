@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JsJason Api</title>
+    <style>
+        /* body {
+            
+        } */
+
+        .titlepage{
+            text-align: center;
+            font-size: 2.4rem;
+            color: peru;
+        }
+
+        .maincontrols {
+            margin-top: 20px;
+            margin-bottom: 60px;
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        .o1 {
+            font-size: 2rem;
+            border: 1px solid black;
+            text-align: center;
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            background-image: linear-gradient(to right, #62ce97, #58c07f, #51b167, #4ba34e, #469434, #3f8727, #377b19, #306f07, #236208, #175607, #0a4906, #003d04);
+        }
+
+        .contentbox {
+            border-bottom: 2px solid white;
+            display: grid;
+            gap: 1rem;
+            grid-template-columns: repeat(auto-fit, minmax(min(100%, 150px), 1fr) );
+        }
+
+        .designt {
+            text-align: center;
+            color: black;
+            background-color: white;
+            border-left: 2px solid coral;
+            border-right: 2px solid coral;
+            width: 100px;
+            height: 30px;
+            padding: 6px;
+            cursor: pointer;
+            position: relative;
+            z-index: 10;
+        }
+
+        /* .designt::after {
+            position: absolute;
+            content: '';
+            width: 115px;
+            height: 30px;
+            background-color: black;
+            right: 0;
+            bottom: 0;
+            z-index: -10px;
+            transition: all 1s;
+        }
+
+        .designt:hover::after{
+            right: -10px;
+            bottom: -10px;
+        } */
+    </style>
+</head>
+<body>
+    
+    <nav>
+        <div class="titlepage">FILTER DATA</div>
+
+        <!-- <button onclick="display()">show ToDo</button> -->
+    </nav>
+    <section class="maincontrols">
+        <div id="all" class="designt" >All</div>
+        <div id="completed" class="designt" >completed</div>
+        <div id="uncompleted"  class="designt" >uncompleted</div>
+    </section>
+    <Main class="contentplace">
+        
+    </Main>
+
+    <script src="TODO.js"></script>
+</body>
+</html>
