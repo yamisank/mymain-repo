@@ -1,0 +1,194 @@
+body {
+    background-color: rgb(243, 243, 243);
+    overflow-x: hidden;
+}
+.cont1 {
+    background: linear-gradient(rgba(0, 0, 0, 0.8),rgba(0, 0, 0, 1)) ,url(https://landwey.ng/wp-content/uploads/2020/11/3-bed-terrace-landwey-urban-prime-9.jpeg);
+    width: 1150px;
+    height: 570px;
+    border: 1px solid black;
+    margin-left: 200px;
+    top: 0;
+}
+nav {
+    margin: 0px;
+    display: flex;
+    width: 100%;
+    background-color: transparent;
+    margin-left: 230px;
+    position: sticky ;
+    top: 85px;
+}
+img {
+    width: 183px;
+    height: 36px;
+    margin-left: 70px;
+    margin-top: 5px;
+}
+.navtxt {
+    display: flex;
+    margin-top: 10px;
+    margin-left: 275px;
+}
+.txtbox {
+    padding: 4px 5px 4px 5px;
+}
+.span1 {
+    color: rgb(234, 91, 12);
+    font: 11px sans-serif ;
+    font-weight: bold;
+}
+.span1:hover {
+    cursor: pointer;
+}
+.span2 {
+    color: grey;
+    font: 11px sans-serif ;
+    font-weight: bold;
+    opacity: 0.5; 
+}
+.span2:hover {
+    color: rgb(234, 91, 12);
+    opacity: 1;
+    cursor: pointer;
+}
+.button {
+    color: white;
+    background-color: rgb(250, 100, 0);
+    padding-bottom: 10px;
+    padding-top: 10px;
+    padding-left: 25px;
+    padding-right: 10px;
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+    margin-left: 30px;
+    margin-top: 7px;
+    margin-bottom: 3px;
+    border-radius: 5px;
+}
+.icofont-ui-user {
+    color: white;
+    margin: 0px;
+    padding: 0px;
+    padding-left: 10px;
+    padding-right: 5px;
+}
+.div2 {
+    display: flex;
+    margin: 0px;
+    margin-top: 50px;
+}
+.div3 {
+    margin-top: 25px;
+    margin-left: 45px;
+    width: 510px;
+    height: 420px;
+    background-color: transparent;
+    border: 1px solid rgba(128, 128, 128, 0.4);
+    justify-items: center;
+}
+.div3:hover {
+    background-color: rgba(255, 255, 255, 0.6);
+    cursor: pointer;
+}
+h1 {
+    color: white;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 50px;
+    margin-top: 160px;
+    margin-left: 180px;
+    letter-spacing: 6px;
+    margin-bottom: 15px;
+}
+.span3 {
+    color: white;
+    font-family: sans-serif;
+    font-size: 16px;
+    letter-spacing: 4px;
+    margin-left: 200px;
+}
+.cont2 {
+    background: linear-gradient(rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 1)) ,url(https://landwey.ng/wp-content/uploads/2020/11/3-bed-terrace-landwey-urban-prime-9.jpeg);      
+    width: 1150px;
+    height: 570px;
+    border: 1px solid black;
+    margin-left: 200px;
+    margin-top: 90px;  
+}
+.div4 {
+    margin-top: 25px;
+    margin-left: 40px;
+    width: 1070px;
+    height: 420px;
+    background-color: transparent;
+    border: 1px solid rgba(128, 128, 128, 0.4);
+    justify-items: center;
+}
+.div4:hover {
+    background-color: rgba(255, 255, 255, 0.6);
+    cursor: pointer;
+}
+.txtmve {
+    margin-left: 220px;
+    margin-top: 140px;
+}
+.span4 {
+    color: rgba(48, 48, 48, 1);
+    font-family: sans-serif;
+    font-size: 15px;
+    margin-left: 270px;
+    font-weight: bold;
+    margin-top: 200px;
+    /* letter-spacing: 4px;    */
+}
+.socialcont {
+    margin-top: 245px;
+    width: 42px;
+    height: 160px;
+    border-radius: 30px;
+    background-color: white;
+    position: fixed;
+    right: 0;
+    /* border: 1px solid black; */
+    display: flex;
+    flex-direction: column;
+}
+#ico {
+    font-size: 20px;
+    color: rgb(250, 100, 0);
+}
+.icon {
+    margin-top: 15px;
+    margin-left: 12px;
+    margin-right: 5px;
+}
+.whatsapp {
+    width: 150px;
+    height: 30px;
+    border-radius: 30px;
+    background-color: white;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    background-color: rgb(250, 100, 0);
+}
+.icofont-brand-whatsapp {
+    color: white;
+    font-size: 17px;
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+span {
+    color: white;
+    font-size: 13px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 8px;
+}
+span:hover {
+    cursor: pointer;
+}
